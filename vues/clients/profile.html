@@ -1,0 +1,85 @@
+<!-- Gabarit Profil Personnel -->
+<div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+    
+    <div class="card" id="profile-summary-card">
+        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+            <img src="./assets/images/default-avatar.png" alt="Avatar" id="profile-summary-avatar" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-color);">
+            <div style="flex: 1; min-width: 220px;">
+                <h3 id="profile-summary-name" style="margin-bottom: 6px;">Chargement du profil...</h3>
+                <p id="profile-summary-meta" class="text-muted" style="margin-bottom: 6px;">Chargement...</p>
+                <p id="profile-summary-friends" class="text-primary" style="margin-bottom: 6px;"></p>
+                <p id="profile-summary-relation" class="text-muted"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informations Personnelles -->
+    <div class="card" id="profile-edit-section">
+        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-user-pen text-primary"></i> Modifier mes informations
+        </h3>
+        
+        <form id="profile-form">
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
+                <img src="./assets/images/default-avatar.png" alt="Avatar" id="profile-avatar-preview" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border-color);">
+                <div>
+                    <label class="btn btn-secondary" style="cursor: pointer;">
+                        <i class="fa-solid fa-camera"></i> Changer la photo
+                        <input type="file" id="prof-avatar" accept="image/*" style="display: none;">
+                    </label>
+                    <p class="text-muted" style="font-size: 12px; margin-top: 4px;">Formats acceptés : PNG, JPG, GIF.</p>
+                </div>
+            </div>
+            
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                <div>
+                    <label for="prof-prenom">Prénom</label>
+                    <input type="text" id="prof-prenom" class="form-control" required>
+                </div>
+                <div>
+                    <label for="prof-nom">Nom</label>
+                    <input type="text" id="prof-nom" class="form-control" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="prof-email">Adresse Email (Non modifiable)</label>
+                <input type="email" id="prof-email" class="form-control" disabled style="background-color: var(--bg-main);">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;"><i class="fa-solid fa-floppy-disk"></i> Enregistrer les modifications</button>
+        </form>
+    </div>
+    
+    <!-- Modification du Mot de Passe -->
+    <div class="card" id="password-section">
+        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-lock text-danger"></i> Sécurité du compte
+        </h3>
+        
+        <form id="password-form">
+            <div class="form-group">
+                <label for="prof-curr-pass">Mot de passe actuel</label>
+                <input type="password" id="prof-curr-pass" class="form-control" placeholder="Saisir votre mot de passe actuel" required>
+            </div>
+            <div class="form-group">
+                <label for="prof-new-pass">Nouveau mot de passe</label>
+                <input type="password" id="prof-new-pass" class="form-control" placeholder="Saisir le nouveau mot de passe" required>
+            </div>
+            <div class="form-group">
+                <label for="prof-conf-pass">Confirmer le nouveau mot de passe</label>
+                <input type="password" id="prof-conf-pass" class="form-control" placeholder="Confirmer le nouveau mot de passe" required>
+            </div>
+            
+            <button type="submit" class="btn btn-danger" style="margin-top: 10px;"><i class="fa-solid fa-key"></i> Modifier le mot de passe</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3 style="margin-bottom: 16px;">Publications de ce profil</h3>
+        <div id="profile-posts-container">
+            <p class="text-muted">Chargement des publications...</p>
+        </div>
+    </div>
+
+</div>

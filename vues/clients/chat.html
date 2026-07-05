@@ -1,0 +1,55 @@
+<!-- Gabarit du Chat -->
+<div class="chat-layout">
+    <!-- Barre latérale des discussions -->
+    <div class="chat-sidebar">
+        <div class="sidebar-header">
+            <h3 style="margin-bottom: 12px;"><i class="fa-solid fa-comments text-primary"></i> Discussions</h3>
+            <input type="text" id="chat-search" class="chat-search-input" placeholder="Rechercher un ami...">
+        </div>
+        <div id="chat-search-results" class="chat-search-results hidden"></div>
+        <div id="chat-conversations" class="conversations-list">
+            <div class="app-loader" style="min-height: auto; padding: 20px;">
+                <div class="spinner" style="width: 24px; height: 24px; border-width: 2px;"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fenêtre de conversation principale -->
+    <div class="chat-window">
+        <!-- 1. État : Aucune conversation sélectionnée -->
+        <div id="chat-window-empty" class="app-loader" style="min-height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 40px; text-align: center;">
+            <i class="fa-solid fa-paper-plane" style="font-size: 48px; color: var(--text-light); margin-bottom: 16px;"></i>
+            <h3>Vos Messages</h3>
+            <p class="text-muted" style="margin-top: 8px;">Sélectionnez une discussion à gauche pour commencer à discuter en temps réel.</p>
+        </div>
+        
+        <!-- 2. État : Conversation active -->
+        <div id="chat-window-active" class="hidden" style="display: flex; flex-direction: column; height: 100%;">
+            <div class="chat-window-header">
+                <img src="./assets/images/default-avatar.png" alt="Avatar" class="avatar-sm" id="chat-partner-avatar">
+                <div>
+                    <h4 id="chat-partner-name" style="margin: 0;">Chargement...</h4>
+                    <span style="font-size: 11px; color: var(--success-color);"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Discussion active</span>
+                </div>
+            </div>
+            
+            <!-- Liste des bulles de messages -->
+            <div id="chat-messages" class="chat-messages-container">
+                <!-- Chargé par AJAX -->
+            </div>
+            
+            <!-- Formulaire d'envoi -->
+            <form id="chat-send-form" class="chat-input-area">
+                <!-- Importation de fichier image -->
+                <label class="icon-btn" title="Envoyer une image" style="background-color: var(--bg-hover); cursor: pointer;">
+                    <i class="fa-solid fa-image text-success"></i>
+                    <input type="file" id="chat-file-input" accept="image/*" style="display: none;">
+                </label>
+                
+                <input type="text" id="chat-message-input" class="chat-input-control" placeholder="Écrire un message..." autocomplete="off">
+                
+                <button type="submit" class="btn btn-primary" style="border-radius: 50%; width: 40px; height: 40px; padding: 0;"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</div>

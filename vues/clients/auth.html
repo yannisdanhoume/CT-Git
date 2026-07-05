@@ -1,0 +1,76 @@
+<!-- Gabarit Authentification Client (Login / Register / Forgot Password) -->
+<div class="auth-wrapper">
+    <div class="card auth-container">
+        <div class="auth-logo">
+            <h1><i class="fa-brands fa-facebook"></i> SocialConnect</h1>
+            <p class="text-muted">Connectez-vous pour voir vos amis.</p>
+        </div>
+
+        <!-- 1. Formulaire de Connexion -->
+        <div id="login-form-container">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Adresse Email</label>
+                    <input type="email" id="login-email" class="form-control" placeholder="nom@exemple.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Mot de passe</label>
+                    <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Se connecter</button>
+            </form>
+            <div class="auth-links">
+                <a href="#" id="show-register">Créer un compte</a>
+                <a href="#" id="show-forgot" class="text-muted">Mot de passe oublié ?</a>
+                <hr style="border: 0; border-top: 1px solid var(--border-light); margin: 10px 0;">
+                <a href="#admin-login" style="font-weight: 600; color: var(--text-muted);"><i class="fa-solid fa-user-gear"></i> Accès Modérateur / Admin</a>
+            </div>
+        </div>
+
+        <!-- 2. Formulaire d'Inscription -->
+        <div id="register-form-container" class="hidden">
+            <form id="register-form">
+                <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div>
+                        <label for="reg-prenom">Prénom</label>
+                        <input type="text" id="reg-prenom" class="form-control" placeholder="John" required>
+                    </div>
+                    <div>
+                        <label for="reg-nom">Nom</label>
+                        <input type="text" id="reg-nom" class="form-control" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Adresse Email</label>
+                    <input type="email" id="reg-email" class="form-control" placeholder="nom@exemple.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Mot de passe</label>
+                    <input type="password" id="reg-password" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%; margin-top: 10px; background-color: var(--success-color); color: white;">Créer mon compte</button>
+            </form>
+            <div class="auth-links">
+                <a href="#" id="show-login">Déjà inscrit ? Se connecter</a>
+            </div>
+        </div>
+
+        <!-- 3. Formulaire de Mot de passe oublié -->
+        <div id="forgot-form-container" class="hidden">
+            <h3 style="margin-bottom: 12px; text-align: center;">Mot de passe oublié ?</h3>
+            <p class="text-muted" style="font-size: 14px; margin-bottom: 20px; text-align: center;">
+                Saisissez votre adresse email ci-dessous. Nous vous enverrons un lien HTML par courriel pour réinitialiser votre mot de passe.
+            </p>
+            <form id="forgot-form">
+                <div class="form-group">
+                    <label for="forgot-email">Adresse Email</label>
+                    <input type="email" id="forgot-email" class="form-control" placeholder="nom@exemple.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Envoyer le lien de réinitialisation</button>
+            </form>
+            <div class="auth-links">
+                <a href="#" id="show-login-from-forgot">Retourner à la connexion</a>
+            </div>
+        </div>
+    </div>
+</div>

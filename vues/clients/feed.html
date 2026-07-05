@@ -1,0 +1,28 @@
+<!-- Gabarit du flux d'actualités -->
+<div class="feed-layout">
+    <!-- Boîte de création de publication -->
+    <div class="card create-post-card">
+        <form id="create-post-form">
+            <div class="create-post-header">
+                <img src="./assets/images/default-avatar.png" alt="Avatar" class="avatar-sm" id="create-post-avatar">
+                <textarea id="post-desc" class="create-post-input" placeholder="Que voulez-vous dire?" rows="2"></textarea>
+            </div>
+            
+            <div class="create-post-actions">
+                <label class="file-upload-btn">
+                    <i class="fa-solid fa-image text-success"></i> Photo/Vidéo
+                    <input type="file" id="post-file" accept="image/*">
+                </label>
+                <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Publier</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Conteneur des publications -->
+    <div id="feed-posts" class="feed-posts">
+        <!-- Les articles chargés par AJAX seront injectés ici -->
+        <div class="card text-center text-muted">
+            <p>Chargement des publications...</p>
+        </div>
+    </div>
+</div>

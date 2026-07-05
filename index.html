@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialConnect - Votre Réseau Social</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/auth.css">
+    <link rel="stylesheet" href="./assets/css/feed.css">
+    <link rel="stylesheet" href="./assets/css/chat.css">
+    <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+<body>
+    <!-- Toast Notification System -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- App Wrapper -->
+    <div id="app-root">
+        <!-- Main Layout (Header + Content Area) -->
+        <header id="main-header" class="main-header hidden">
+            <div class="header-left">
+                <a href="#feed" class="logo-link">
+                    <span class="logo-text"><i class="fa-brands fa-facebook text-primary"></i> SocialConnect</span>
+                </a>
+            </div>
+            
+            <!-- Navigation icons -->
+            <nav class="header-center">
+                <a href="#feed" class="nav-item active" title="Fil d'actualité" id="nav-feed">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="#friends" class="nav-item" title="Amis" id="nav-friends">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span class="nav-badge hidden" id="friends-nav-badge"></span>
+                </a>
+                <a href="#chat" class="nav-item" title="Messagerie" id="nav-chat">
+                    <i class="fa-solid fa-message"></i>
+                </a>
+                <a href="#admin" class="nav-item hidden" title="Back-Office" id="nav-admin">
+                    <i class="fa-solid fa-toolbox"></i>
+                </a>
+            </nav>
+            
+            <!-- User controls -->
+            <div class="header-right">
+                <a href="#profile" class="user-profile-btn" id="header-user-btn">
+                    <img src="./assets/images/default-avatar.png" alt="Avatar" class="avatar-sm" id="header-user-avatar">
+                    <span class="username-sm" id="header-username">Utilisateur</span>
+                </a>
+                <button class="icon-btn" id="logout-btn" title="Se déconnecter">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Area -->
+        <main id="app-container" class="app-container">
+            <!-- Loaded views will be injected here -->
+            <div class="app-loader">
+                <div class="spinner"></div>
+                <p>Chargement de SocialConnect...</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="./assets/js/api.js"></script>
+    <script src="./assets/js/router.js"></script>
+    
+    <!-- Component Logic Scripts -->
+    <script src="./assets/js/auth.js"></script>
+    <script src="./assets/js/feed.js"></script>
+    <script src="./assets/js/friends.js"></script>
+    <script src="./assets/js/profile.js"></script>
+    <script src="./assets/js/chat.js"></script>
+    <script src="./assets/js/admin.js"></script>
+    
+    <!-- App Entry Point -->
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

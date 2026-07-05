@@ -1,0 +1,37 @@
+<!-- Gabarit de confirmation d'inscription -->
+<div class="auth-wrapper">
+    <div class="card auth-container" style="text-align: center;">
+        <div id="confirm-loading" class="app-loader" style="min-height: auto; padding: 20px;">
+            <div class="spinner"></div>
+            <p>Vérification de votre lien de confirmation...</p>
+        </div>
+
+        <div id="confirm-success" class="hidden">
+            <div style="font-size: 64px; color: var(--success-color); margin-bottom: 16px;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2 style="margin-bottom: 12px;">Compte activé !</h2>
+            <p class="text-muted" style="margin-bottom: 20px;">
+                Votre adresse email a été confirmée avec succès.<br>
+                Vous pouvez maintenant vous connecter et profiter de SocialConnect.
+            </p>
+            <a href="#auth" class="btn btn-primary" style="text-decoration: none;">
+                <i class="fa-solid fa-right-to-bracket"></i> Se connecter
+            </a>
+        </div>
+
+        <div id="confirm-error" class="hidden">
+            <div style="font-size: 64px; color: var(--danger-color); margin-bottom: 16px;">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <h2 style="margin-bottom: 12px;">Lien invalide ou expiré</h2>
+            <p class="text-muted" style="margin-bottom: 20px;">
+                Le lien de confirmation que vous avez utilisé est invalide, a expiré,<br>
+                ou le compte a déjà été activé.
+            </p>
+            <a href="#auth" class="btn btn-primary" style="text-decoration: none;">
+                <i class="fa-solid fa-right-to-bracket"></i> Aller à la connexion
+            </a>
+        </div>
+    </div>
+</div>
